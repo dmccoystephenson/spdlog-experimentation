@@ -12,10 +12,10 @@ The spdlog library can be utilized in a few ways:
 2. Include "spdlog/spdlog.h"
 3. Use spdlog.
 
-## Memory Leak Recreation
-A goal here is to recreate a memory leak error that appears to be occurring in 0.13.0 when a rotating file sink is used. Once recreated, we will update to a newer version of the library in an attempt to resolve the issue.
-
 ## Troubleshooting
+### Memory Leak (Unsolved)
+A goal here was to recreate a memory leak error that appears to be occurring in 0.13.0 when a rotating file sink is used. This was successfully recreated with the debian package for spdlog which was v0.16.3. Troubleshooting is in progress -- updating spdlog to the most recently released version may solve this.
+
 ### pthread undefined
 Use the -pthread flag with gcc.
 https://stackoverflow.com/questions/1662909/undefined-reference-to-pthread-create-in-linux
