@@ -4,6 +4,6 @@ testing: src/testing.cpp
 	@echo "---"
 	@echo "Compiling testing.cpp"
 
-	g++ src/testing.cpp -lspdlog -o testing
+	g++ -pthread src/testing.cpp -o testing
 
 	@echo "Finished compiling testing.cpp"
