@@ -1,12 +1,9 @@
 #include <string>
 #include <iostream>
-#include "../include/myLogger.hpp"
+#include "spdlog/spdlog.h"
 
 
 int main() {
-    std::string toPrint = "Hello World!";
-    
-    MyLogger logger("info.log", "error.log");
-    logger.info(toPrint);
+    spdlog::info("Hello, {}!", "World");
     return 0;
 }
