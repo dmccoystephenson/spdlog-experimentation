@@ -19,6 +19,3 @@ A goal here is to recreate a memory leak error that appears to be occurring in 0
 ### pthread undefined
 Use the -pthread flag with gcc.
 https://stackoverflow.com/questions/1662909/undefined-reference-to-pthread-create-in-linux
-
-## Version
-The version of spdlog being used here is 0.13.0 (https://github.com/gabime/spdlog/releases/tag/v0.13.0).
