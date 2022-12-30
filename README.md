@@ -13,7 +13,9 @@ The spdlog library can be utilized in a few ways:
 3. Use spdlog.
 
 ## Memory Leak Recreation
-A goal here is to recreate a memory leak error that appears to be occurring in 0.13.0 when a rotating file sink is used. Once recreated, we will update to a newer version of the library in an attempt to resolve the issue.
+~~A goal here is to recreate a memory leak error that appears to be occurring in 0.13.0 when a rotating file sink is used. Once recreated, we will update to a newer version of the library in an attempt to resolve the issue.~~
+
+Update: The memory leak does not appear to be occurring in the version of spdlog that debian offers through its package manager.
 
 ## Troubleshooting
 ### pthread undefined
