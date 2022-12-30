@@ -18,7 +18,7 @@ int main() {
         myLogger->info("MyLogger instance created");
 
         while (true) {
-            myLogger->info("MyLogger instance is still alive");
+            myLogger->info("MyLogger instance is still alive"); // memory leak here
         }
 
     } catch (const spdlog::spdlog_ex& ex) {

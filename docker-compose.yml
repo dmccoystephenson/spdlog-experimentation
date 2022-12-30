@@ -5,5 +5,5 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      LOG_TO_FILE: "true"
+      LOG_TO_FILE: "true" # causing memory leak
       LOG_TO_CONSOLE: "true"
