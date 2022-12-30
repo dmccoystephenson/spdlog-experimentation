@@ -4,3 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      LOG_TO_FILE: "true"
+      LOG_TO_CONSOLE: "true"
