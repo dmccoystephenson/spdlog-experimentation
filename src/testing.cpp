@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "spdlog/spdlog.h"
+#include "../include/myLogger.hpp"
 
 
 int main() {
@@ -13,7 +14,7 @@ int main() {
         logger->info("spdlog version {}  ",  SPDLOG_VERSION);
 
         logger->info("Creating and using instance of MyLogger");
-        auto myLogger = spdlog::stdout_color_mt("MyLogger");
+        std::shared_ptr<MyLogger> myLogger = std::make_shared<MyLogger>("info.log", "error.log");
         myLogger->info("MyLogger instance created");
 
         while (true) {
