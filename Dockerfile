@@ -1,8 +1,11 @@
 FROM ubuntu:18.04
 USER root
 
+# update
+RUN apt-get update
+
 # add build tools
-RUN apt-get update && apt-get install -y software-properties-common wget git make gcc-7 g++-7 gcc-7-base && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 100 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 100
+RUN apt-get install -y g++
 
 # install cmake
 RUN apt-get install -y cmake

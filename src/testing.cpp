@@ -11,15 +11,16 @@ int main() {
     try {
         auto logger = spdlog::stdout_color_mt("console");
         logger->info("Welcome to spdlog!");
-        logger->info("spdlog version {}  ",  SPDLOG_VERSION);
 
         logger->info("Creating and using instance of MyLogger");
         std::shared_ptr<MyLogger> myLogger = std::make_shared<MyLogger>("info.log", "error.log");
         myLogger->info("MyLogger instance created");
 
-        while (true) {
-            myLogger->info("MyLogger instance is still alive"); // memory leak here
+        for (int i = 1000000; i > 0; i--) { // 1 million
+            myLogger->info("Ticks left: " + std::to_string(i));
         }
+
+        logger->info("spdlog version {}  ",  SPDLOG_VERSION);
 
     } catch (const spdlog::spdlog_ex& ex) {
         std::cout << "Log init failed: " << ex.what() << std::endl;
